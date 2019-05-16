@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Roleta" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FVf-hj-G5c">
+                                <rect key="frame" x="40" y="385" width="334" height="126"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="restaurante, cinema, shopping, etc" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="YyH-BY-Pr0">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Daz-XR-3Kl"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDD-bK-VYR" customClass="CustomButton" customModule="Roleta" customModuleProvider="target">
+                                        <rect key="frame" x="134.5" y="61" width="65" height="65"/>
+                                        <color key="backgroundColor" red="0.32549019607843138" green="0.10588235294117647" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="MCk-9v-MgY"/>
+                                            <constraint firstAttribute="height" constant="65" id="cn5-cr-aIj"/>
+                                        </constraints>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                                        <state key="normal" image="GoArrow">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="go:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FIj-g7-JRl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YyH-BY-Pr0" secondAttribute="trailing" id="b9x-Ub-6Vh"/>
+                                    <constraint firstItem="YyH-BY-Pr0" firstAttribute="leading" secondItem="FVf-hj-G5c" secondAttribute="leading" id="eyY-yJ-lse"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rolêta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-hI-77w">
+                                <rect key="frame" x="149.5" y="322" width="115" height="55"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-OR-dvf">
+                                <rect key="frame" x="197" y="531" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47843137254901957" green="0.50588235294117645" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FVf-hj-G5c" secondAttribute="trailing" constant="40" id="5av-XC-jLb"/>
+                            <constraint firstItem="FVf-hj-G5c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mux-NN-z7T"/>
+                            <constraint firstItem="DDa-OR-dvf" firstAttribute="top" secondItem="FVf-hj-G5c" secondAttribute="bottom" constant="20" id="QNK-zM-6FI"/>
+                            <constraint firstItem="DDa-OR-dvf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mqq-Bp-ncK"/>
+                            <constraint firstItem="FVf-hj-G5c" firstAttribute="top" secondItem="7Ub-hI-77w" secondAttribute="bottom" constant="8" id="vS3-4Y-f71"/>
+                            <constraint firstItem="7Ub-hI-77w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wRU-hS-Tdh"/>
+                            <constraint firstItem="FVf-hj-G5c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="wn7-JF-abh"/>
+                            <constraint firstItem="FVf-hj-G5c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xzC-A7-f0U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="YyH-BY-Pr0" id="kmz-sY-XnK"/>
+                        <outlet property="spinner" destination="DDa-OR-dvf" id="K0i-Ry-cwt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GoArrow" width="100" height="106"/>
+    </resources>
+</document>
