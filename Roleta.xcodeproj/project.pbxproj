@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B636DBB5227DF9AD00B91109 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B636DBB4227DF9AD00B91109 /* AppDelegate.swift */; };
 		B636DBBA227DF9AD00B91109 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B636DBB8227DF9AD00B91109 /* Main.storyboard */; };
-		B636DBBD227DF9AD00B91109 /* Roleta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B636DBBB227DF9AD00B91109 /* Roleta.xcdatamodeld */; };
 		B636DBBF227DF9AE00B91109 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B636DBBE227DF9AE00B91109 /* Assets.xcassets */; };
 		B636DBC2227DF9AE00B91109 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B636DBC0227DF9AE00B91109 /* LaunchScreen.storyboard */; };
 		B636DBCD227DF9AE00B91109 /* RoletaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B636DBCC227DF9AE00B91109 /* RoletaTests.swift */; };
@@ -39,7 +38,6 @@
 		B636DBB1227DF9AD00B91109 /* Roleta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roleta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B636DBB4227DF9AD00B91109 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B636DBB9227DF9AD00B91109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B636DBBC227DF9AD00B91109 /* Roleta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Roleta.xcdatamodel; sourceTree = "<group>"; };
 		B636DBBE227DF9AE00B91109 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B636DBC1227DF9AE00B91109 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B636DBC3227DF9AE00B91109 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				B636DBBE227DF9AE00B91109 /* Assets.xcassets */,
 				B636DBC0227DF9AE00B91109 /* LaunchScreen.storyboard */,
 				B636DBC3227DF9AE00B91109 /* Info.plist */,
-				B636DBBB227DF9AD00B91109 /* Roleta.xcdatamodeld */,
 			);
 			path = Roleta;
 			sourceTree = "<group>";
@@ -280,7 +277,6 @@
 			files = (
 				B636DBE6227E022600B91109 /* HomeVC.swift in Sources */,
 				B636DBB5227DF9AD00B91109 /* AppDelegate.swift in Sources */,
-				B636DBBD227DF9AD00B91109 /* Roleta.xcdatamodeld in Sources */,
 				B636DBE9227E060D00B91109 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -610,19 +606,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		B636DBBB227DF9AD00B91109 /* Roleta.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				B636DBBC227DF9AD00B91109 /* Roleta.xcdatamodel */,
-			);
-			currentVersion = B636DBBC227DF9AD00B91109 /* Roleta.xcdatamodel */;
-			path = Roleta.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = B636DBA9227DF9AD00B91109 /* Project object */;
 }
