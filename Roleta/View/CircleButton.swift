@@ -1,19 +1,19 @@
 //
-//  CustomButton.swift
+//  CircleButton.swift
 //  Roleta
 //
-//  Created by Lucas Fernandez Nicolau on 04/05/19.
-//  Copyright © 2019 {lfn}. All rights reserved.
+//  Created by Lucas Fernandez Nicolau on 24/03/20.
+//  Copyright © 2020 {lfn}. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class CustomButton: UIButton {
+class CircleButton: UIButton {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.layer.cornerRadius = 25
+        self.layer.cornerRadius = self.frame.width / 2
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

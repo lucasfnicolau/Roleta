@@ -29,6 +29,7 @@ class HomeVC: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tap)
         searchTextField.delegate = self
+        searchTextField.returnKeyType = .done
         
         if CLLocationManager.locationServicesEnabled() == true {
             
@@ -59,30 +60,33 @@ class HomeVC: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     
     @IBAction func go(_ sender: Any) {
         guard let search = searchTextField.text else { return }
-        spinner.isHidden = false
-        spinner.startAnimating()
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        if let region = region {
-            let searchRequest = MKLocalSearch.Request()
-            searchRequest.naturalLanguageQuery = search
-            searchRequest.region = region
-            
-            let localSearch = MKLocalSearch(request: searchRequest)
-            localSearch.start { (response, error) in
-                guard error == nil else {
-                    print(error!)
+
+        if search.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            spinner.isHidden = false
+            spinner.startAnimating()
+            UIApplication.shared.isNetworkActivityIndicatorVisible = true
+
+            if let region = region {
+                let searchRequest = MKLocalSearch.Request()
+                searchRequest.naturalLanguageQuery = search
+                searchRequest.region = region
+
+                let localSearch = MKLocalSearch(request: searchRequest)
+                localSearch.start { (response, error) in
+                    guard error == nil else {
+                        print(error!)
+                        self.spinner.stopAnimating()
+                        return
+                    }
+
+                    let mapItems = response!.mapItems
+                    let random = Int(arc4random_uniform(UInt32(mapItems.count - 1)))
+
                     self.spinner.stopAnimating()
-                    return
+
+                    mapItems[random].openInMaps(launchOptions: nil)
+                    UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 }
-                
-                let mapItems = response!.mapItems
-                let random = Int(arc4random_uniform(UInt32(mapItems.count - 1)))
-                
-                self.spinner.stopAnimating()
-                
-                mapItems[random].openInMaps(launchOptions: nil)
-                UIApplication.shared.isNetworkActivityIndicatorVisible = false
             }
         }
         
@@ -92,5 +96,12 @@ class HomeVC: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+
+    @IBAction func showInfo(_ sender: UIButton) {
+        let infoVC = InfoVC()
+        infoVC.modalPresentationStyle = .custom
+        infoVC.modalTransitionStyle = .crossDissolve
+        show(infoVC, sender: nil)
     }
 }
