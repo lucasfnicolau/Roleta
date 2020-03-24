@@ -23,9 +23,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationUsageDescription</key>
-	<string>Este app necessita dos recursos de localização para funcionar</string>
+	<string>Este app necessita dos recursos de localização para funcionar, pois busca estabelecimentos próximos</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Este app necessita da sua localização para poder encontrar locais próximos</string>
+	<string>Este app necessita da sua localização para poder encontrar locais próximos para te recomendar</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
