@@ -93,4 +93,11 @@ class HomeVC: UIViewController, UITextFieldDelegate, CLLocationManagerDelegate {
         textField.resignFirstResponder()
         return false
     }
+
+    @IBAction func showInfo(_ sender: UIButton) {
+        let infoVC = InfoVC()
+        infoVC.modalPresentationStyle = .custom
+        infoVC.modalTransitionStyle = .crossDissolve
+        show(infoVC, sender: nil)
+    }
 }

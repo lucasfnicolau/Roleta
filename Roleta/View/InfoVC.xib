@@ -48,9 +48,12 @@
                     <state key="normal" title="Entendi!">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="gotIt:" destination="-1" eventType="touchUpInside" id="KP8-TL-xBH"/>
+                    </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.69761344178082196" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.85110766267123283" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="QwX-9P-DLC" firstAttribute="top" secondItem="SEw-jg-ID8" secondAttribute="bottom" constant="20" id="LXe-yf-IGu"/>
                 <constraint firstItem="SEw-jg-ID8" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-40" id="OJF-tC-GpX"/>
